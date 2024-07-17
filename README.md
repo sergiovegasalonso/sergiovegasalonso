@@ -1,7 +1,4 @@
 ### 🌱 Sergio
-
-https://gitlab.com/sergiovegasalonso
-
 <!--
 **sergiovegasalonso/sergiovegasalonso** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
