@@ -1,22 +1,51 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html id="root" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>sergio vegas alonso - cv</title>
+    <meta name="description" content="my cv" />
+  </head>
+  <body class="bg-white dark:bg-black">
+    <input id="mode-switch" type="checkbox" />
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<script>
+  const html = document.getElementById("root");
+  const modeSwitch = document.getElementById("mode-switch") as HTMLInputElement;
+
+  setEventListeners();
+  setThemeFromLocalStorageOrPrefersColorScheme();
+
+  function setEventListeners() {
+    modeSwitch?.addEventListener("click", () => {
+      (modeSwitch as HTMLInputElement).checked ? setDarkMode() : setLightMode();
+    });
+  }
+
+  function setThemeFromLocalStorageOrPrefersColorScheme() {
+    localStorage["mode"] === "dark" ||
+    (!("mode" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ? setDarkMode()
+      : setLightMode();
+  }
+
+  function setLightMode() {
+    html?.classList.remove("dark");
+    html?.classList.add("light");
+	modeSwitch.checked = false;
+    localStorage.setItem("mode", "light");
+  }
+
+  function setDarkMode() {
+    html?.classList.remove("light");
+    html?.classList.add("dark");
+	modeSwitch.checked = true;
+    localStorage.setItem("mode", "dark");
+  }
+</script>
