@@ -1,3 +1,7 @@
+---
+import ModeSwitch from "../components/ModeSwitch.astro";
+---
+
 <!doctype html>
 <html id="root" lang="en">
   <head>
@@ -9,43 +13,7 @@
     <meta name="description" content="my cv" />
   </head>
   <body class="bg-white dark:bg-black">
-    <input id="mode-switch" type="checkbox" />
+    <ModeSwitch />
     <slot />
   </body>
 </html>
-
-<script>
-  const html = document.getElementById("root");
-  const modeSwitch = document.getElementById("mode-switch") as HTMLInputElement;
-
-  setEventListeners();
-  setThemeFromLocalStorageOrPrefersColorScheme();
-
-  function setEventListeners() {
-    modeSwitch?.addEventListener("click", () => {
-      (modeSwitch as HTMLInputElement).checked ? setDarkMode() : setLightMode();
-    });
-  }
-
-  function setThemeFromLocalStorageOrPrefersColorScheme() {
-    localStorage["mode"] === "dark" ||
-    (!("mode" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? setDarkMode()
-      : setLightMode();
-  }
-
-  function setLightMode() {
-    html?.classList.remove("dark");
-    html?.classList.add("light");
-    modeSwitch.checked = false;
-    localStorage.setItem("mode", "light");
-  }
-
-  function setDarkMode() {
-    html?.classList.remove("light");
-    html?.classList.add("dark");
-    modeSwitch.checked = true;
-    localStorage.setItem("mode", "dark");
-  }
-</script>
