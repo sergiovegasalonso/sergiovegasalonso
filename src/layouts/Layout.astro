@@ -38,14 +38,14 @@
   function setLightMode() {
     html?.classList.remove("dark");
     html?.classList.add("light");
-	modeSwitch.checked = false;
+    modeSwitch.checked = false;
     localStorage.setItem("mode", "light");
   }
 
   function setDarkMode() {
     html?.classList.remove("light");
     html?.classList.add("dark");
-	modeSwitch.checked = true;
+    modeSwitch.checked = true;
     localStorage.setItem("mode", "dark");
   }
 </script>
