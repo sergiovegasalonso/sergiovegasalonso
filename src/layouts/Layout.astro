@@ -25,19 +25,19 @@ import ModeSwitch from "../components/ModeSwitch.astro";
   }
 
   html.light body {
-    background-color: #ffb802;
+    background-color: var(--light--background-color);
     background-image: radial-gradient(
       circle at center,
-      #333333 0.1rem,
+      var(--dark--background-color) 0.1rem,
       transparent 0
     );
   }
 
   html.dark body {
-    background-color: #333333;
+    background-color: var(--dark--background-color);
     background-image: radial-gradient(
       circle at center,
-      #ffb802 0.1rem,
+      var(--light--background-color) 0.1rem,
       transparent 0
     );
   }
