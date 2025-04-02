@@ -4,6 +4,12 @@
 
 :root {
   --light--background-color: #ffb802;
+  --light--foreground-color: #fff1e8;
+  --light--border-color: #fff1e8;
+  --light--shadow-color: #000000;
 
   --dark--background-color: #333333;
+  --dark--foreground-color: #fff1e8;
+  --dark--border-color: #fff1e8;
+  --dark--shadow-color: #fff1e8;
 }

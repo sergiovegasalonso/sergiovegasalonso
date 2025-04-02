@@ -1,6 +1,17 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import ModeSwitch from "../components/ModeSwitch.astro";
 ---
 
-<Layout />
+<Layout>
+    <main class="w-9/10 2xl:w-1/2 h-full bg-(--light--foreground-color) dark:bg-(--dark--foreground-color) border">
+        <ModeSwitch />
+    </main>
+</Layout>
+
+<style>
+    main {
+        box-shadow: 12px 12px 2px 1px var(--light--shadow-color);
+    }
+</style>
