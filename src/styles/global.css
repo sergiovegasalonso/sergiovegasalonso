@@ -2,14 +2,18 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --light--background-color: #ffb802;
-  --light--foreground-color: #fff1e8;
-  --light--border-color: #fff1e8;
-  --light--shadow-color: #000000;
+html.light {
+  --background-color: oklch(0.83 0.1708 80.48);
+  --background-color-contrast: oklch(0.32 0 0);
+  --foreground-color: oklch(0.97 0.0194 55.15);
+  --border-color: oklch(0.97 0.0194 55.15);
+  --shadow: 6px 6px 0 0 oklch(0 0 0);
+}
 
-  --dark--background-color: #333333;
-  --dark--foreground-color: #fff1e8;
-  --dark--border-color: #fff1e8;
-  --dark--shadow-color: #fff1e8;
+html.dark {
+  --background-color: oklch(0.32 0 0);
+  --background-color-contrast: oklch(0.83 0.1708 80.48);
+  --foreground-color: oklch(0.97 0.0194 55.15);
+  --border-color: oklch(0.97 0.0194 55.15);
+  --shadow: 6px 6px 0 0 oklch(0 0 0);
 }
