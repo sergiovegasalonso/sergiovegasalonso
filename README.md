@@ -2,4 +2,4 @@
 
 ## pending tasks
 
-...
+- scroll mobile
