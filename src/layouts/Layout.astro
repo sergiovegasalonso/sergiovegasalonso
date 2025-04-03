@@ -8,19 +8,13 @@
     <title>sergio vegas alonso - cv</title>
     <meta name="description" content="my cv" />
   </head>
-  <body class="flex justify-center h-screen p-0 md:py-8">
+  <body class="flex justify-center h-screen p-0 md:py-8 bg-(--background-color) bg-(length:--background-size) transition">
     <slot />
   </body>
 </html>
 
 <style>
-  body {
-    transition: background-color 0.25s ease-in;
-    background-size: 2rem 2rem;
-  }
-
   html.light body {
-    background-color: var(--background-color);
     background-image: radial-gradient(
       circle at center,
       var(--background-color-contrast) 0.1rem,
@@ -29,7 +23,6 @@
   }
 
   html.dark body {
-    background-color: var(--background-color);
     background-image: radial-gradient(
       circle at center,
       var(--background-color-contrast) 0.1rem,

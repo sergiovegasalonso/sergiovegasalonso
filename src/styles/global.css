@@ -2,12 +2,17 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --background-size: 2rem 2rem;
+  --shadow-structure: 6px 6px 0 0;
+}
+
 html.light {
   --background-color: oklch(0.83 0.1708 80.48);
   --background-color-contrast: oklch(0.32 0 0);
   --foreground-color: oklch(0.97 0.0194 55.15);
   --border-color: oklch(0.97 0.0194 55.15);
-  --shadow: 6px 6px 0 0 oklch(0 0 0);
+  --shadow: var(--shadow-structure) oklch(0 0 0);
 }
 
 html.dark {
@@ -15,5 +20,5 @@ html.dark {
   --background-color-contrast: oklch(0.83 0.1708 80.48);
   --foreground-color: oklch(0.97 0.0194 55.15);
   --border-color: oklch(0.97 0.0194 55.15);
-  --shadow: 6px 6px 0 0 oklch(0 0 0);
+  --shadow: var(--shadow-structure) oklch(0 0 0);
 }
