@@ -26,6 +26,8 @@ html.light {
   --foreground-color: oklch(0.97 0.0194 55.15);
   --border-color: oklch(0.97 0.0194 55.15);
   --shadow: var(--shadow-structure) oklch(0 0 0);
+  --mark-background-color: oklch(0.67 0.1742 272.17);
+  --mark-color: white;
 }
 
 html.dark {
