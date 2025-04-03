@@ -2,6 +2,19 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "WinkySans";
+  src: url("/src/assets/fonts/WinkySans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "WinkySans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+
 :root {
   --background-size: 2rem 2rem;
   --shadow-structure: 6px 6px 0 0;

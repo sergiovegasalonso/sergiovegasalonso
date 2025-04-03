@@ -6,8 +6,91 @@ import ModeSwitch from "@components/ModeSwitch.astro";
 
 <Layout>
   <main
-    class="h-full w-full border border-2 bg-(--foreground-color) p-8 shadow-(--shadow) md:w-2xl"
+    class="h-full w-full border border-2 bg-(--foreground-color) p-8 shadow-(--shadow) md:w-2xl overflow-x-hidden overflow-y-scroll"
   >
-    <ModeSwitch />
+    <section class="mb-4 flex justify-between">
+      <h1 class="text-lg font-semibold">Sergio Vegas Alonso</h1>
+      <ModeSwitch />
+    </section>
+    <section class="mb-4">
+      <p class="mb-2">
+        ¡Hola! Mi nombre es Sergio y soy ingeniero de software.
+      </p>
+      <p>
+        A lo largo de mi carrera he trabajado en muchos tipos de proyectos,
+        siempre con el foco en el rendimiento, las buenas prácticas y la mejora
+        continua.
+      </p>
+    </section>
+    <section class="mb-4">
+      <h1 class="mb-4 text-lg font-semibold">Experiencia Profesional</h1>
+      <section class="mb-4">
+        <h2 class="text-md font-medium">Ingeniero de Software en Capitole</h2>
+        <p class="mb-2 text-sm opacity-70">
+          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
+        </p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p>fdsaafdsadfsdfsafadsfadsfads</p>
+      </section>
+      <section class="mb-4">
+        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
+        <p class="mb-2 text-sm opacity-70">
+          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
+        </p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p>fdsaafdsadfsdfsafadsfadsfads</p>
+      </section>
+      <section class="mb-4">
+        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
+        <p class="mb-2 text-sm opacity-70">
+          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
+        </p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p>fdsaafdsadfsdfsafadsfadsfads</p>
+      </section>
+      <section class="mb-4">
+        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
+        <p class="mb-2 text-sm opacity-70">
+          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
+        </p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p>fdsaafdsadfsdfsafadsfadsfads</p>
+      </section>
+      <section class="mb-4">
+        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
+        <p class="mb-2 text-sm opacity-70">
+          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
+        </p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
+        <p>fdsaafdsadfsdfsafadsfadsfads</p>
+      </section>
+    </section>
   </main>
 </Layout>
+
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
