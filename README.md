@@ -2,4 +2,3 @@
 
 ## pending tasks
 
-config theme with all variables
