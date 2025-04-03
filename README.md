@@ -3,3 +3,6 @@
 ## pending tasks
 
 - scroll mobile
+- components
+- cool marks
+- modify scrollbar
