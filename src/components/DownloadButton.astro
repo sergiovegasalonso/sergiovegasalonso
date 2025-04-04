@@ -1,0 +1,20 @@
+---
+import DownloadIcon from "./icons/DownloadIcon.astro";
+---
+
+<button id="download-button"><DownloadIcon /></button>
+
+<script>
+  const downloadButton = document.getElementById("download-button");
+
+  downloadButton?.addEventListener("click", async () => {
+    const response = await fetch("/api/download-cv");
+    const blob: Blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const link: HTMLAnchorElement = document.createElement("a");
+    link.href = objectUrl;
+    link.download = "products.pdf";
+    link.click();
+    URL.revokeObjectURL(objectUrl);
+  });
+</script>
