@@ -1,5 +1,5 @@
 ---
-import DownloadIcon from "./icons/DownloadIcon.astro";
+import DownloadIcon from "@components/icons/DownloadIcon.astro";
 ---
 
 <button id="download-button"><DownloadIcon /></button>
@@ -8,9 +8,9 @@ import DownloadIcon from "./icons/DownloadIcon.astro";
   const downloadButton = document.getElementById("download-button");
 
   downloadButton?.addEventListener("click", async () => {
-    const response = await fetch("/api/download-cv");
+    const response: Response = await fetch("/api/download-cv");
     const blob: Blob = await response.blob();
-    const objectUrl = URL.createObjectURL(blob);
+    const objectUrl: string = URL.createObjectURL(blob);
     const link: HTMLAnchorElement = document.createElement("a");
     link.href = objectUrl;
     link.download = "products.pdf";

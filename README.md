@@ -2,8 +2,7 @@
 
 ## pending tasks
 
-- index sin style (todo componentes)
-- hacer que todos los componenntes usen variables
+- refactor download file
 - scroll mobile
 - cool marks
 - modify scrollbar
