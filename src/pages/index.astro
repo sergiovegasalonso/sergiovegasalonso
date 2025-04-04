@@ -3,97 +3,66 @@ import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
 import ModeSwitch from "@components/ModeSwitch.astro";
 import Mark from "@components/Mark.astro";
+import Heading1 from "@components/Heading1.astro";
+import Experience from "@components/Experience.astro";
+import BreakLine from "@components/BreakLine.astro";
 ---
 
 <Layout>
   <main
-    class="h-full w-full overflow-x-hidden overflow-y-scroll border border-2 bg-(--foreground-color) p-8 shadow-(--shadow) md:w-2xl"
+    class="h-full w-full overflow-x-hidden overflow-y-scroll border border-2 bg-(--foreground-color) p-8 shadow-(--shadow) lg:w-3xl"
   >
-    <section class="mb-4 flex justify-between">
-      <h1 class="text-lg font-semibold">Sergio Vegas Alonso</h1>
+    <section class="flex justify-between">
+      <Heading1>Sergio Vegas Alonso</Heading1>
       <ModeSwitch />
     </section>
-    <section class="mb-4">
-      <p class="mb-2">
-        ¡Hola! Mi nombre es Sergio y soy ingeniero de software.
-      </p>
+    <section class="mb-8">
+      <p>¡Hola! Mi nombre es Sergio y soy ingeniero de software.</p>
+      <BreakLine />
       <p>
         A lo largo de mi carrera he trabajado en muchos tipos de proyectos,
         siempre con el foco en el rendimiento, las buenas prácticas y la mejora
         continua.
       </p>
     </section>
-    <section class="mb-4">
-      <h1 class="mb-4 text-lg font-semibold">Experiencia Profesional</h1>
-      <section class="mb-4">
-        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
-        <p class="mb-2 text-sm opacity-70">
-          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
-        </p>
-        <p class="mb-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. <Mark>Duis aute irure</Mark> dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="mb-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-      <section class="mb-4">
-        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
-        <p class="mb-2 text-sm opacity-70">
-          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
-        </p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p>fdsaafdsadfsdfsafadsfadsfads</p>
-      </section>
-      <section class="mb-4">
-        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
-        <p class="mb-2 text-sm opacity-70">
-          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
-        </p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p>fdsaafdsadfsdfsafadsfadsfads</p>
-      </section>
-      <section class="mb-4">
-        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
-        <p class="mb-2 text-sm opacity-70">
-          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
-        </p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p>fdsaafdsadfsdfsafadsfadsfads</p>
-      </section>
-      <section class="mb-4">
-        <h2 class="text-md font-semibold">Ingeniero de Software en Capitole</h2>
-        <p class="mb-2 text-sm opacity-70">
-          <time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad
-        </p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p class="mb-2">fdsaafdsadfsdfsafadsfadsfads</p>
-        <p>fdsaafdsadfsdfsafadsfadsfads</p>
-      </section>
+    <section>
+      <Heading1>Experiencia Profesional</Heading1>
+      <Experience title="Ingeniero de Software en Capitole">
+        <span slot="dates"
+          ><time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad</span
+        >
+        <div slot="description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. <Mark>Duis aute irure</Mark> dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+          </p>
+          <BreakLine />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <BreakLine />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </Experience>
     </section>
   </main>
 </Layout>

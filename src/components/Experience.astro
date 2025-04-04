@@ -1,0 +1,14 @@
+---
+import Heading2 from "@components/Heading2.astro";
+import ExperienceDates from "@components/ExperienceDates.astro";
+
+const { title } = Astro.props;
+---
+
+<section class="mb-4">
+  <Heading2> {title} </Heading2>
+  <ExperienceDates>
+    <slot name="dates" />
+  </ExperienceDates>
+  <slot name="description" />
+</section>
