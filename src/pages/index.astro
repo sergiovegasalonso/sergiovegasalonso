@@ -1,69 +1,94 @@
 ---
 import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
-import ModeSwitch from "@components/ModeSwitch.astro";
 import Mark from "@components/Mark.astro";
 import Heading1 from "@components/Heading1.astro";
 import Experience from "@components/Experience.astro";
-import BreakLine from "@components/BreakLine.astro";
 import Paragraph from "@components/Paragraph.astro";
+import Page from "@components/Page.astro";
+import Header from "@components/Header.astro";
+import Section from "@components/Section.astro";
 ---
 
 <Layout>
-  <main
-    class="h-full w-full overflow-x-hidden overflow-y-scroll border border-2 bg-(--foreground-color) p-8 shadow-(--shadow) lg:w-4xl"
-  >
-    <section class="flex justify-between">
-      <Heading1>Sergio Vegas Alonso</Heading1>
-      <ModeSwitch />
-    </section>
-    <section class="mb-8">
-      <Paragraph>¡Hola! Mi nombre es Sergio y soy ingeniero de software.</Paragraph>
-      <BreakLine />
+  <Page>
+    <Section> 
+    <Header />
+      <Paragraph
+        >¡Hola! Mi nombre es Sergio y soy ingeniero de software.</Paragraph
+      >
       <Paragraph>
         A lo largo de mi carrera he trabajado en muchos tipos de proyectos,
         siempre con el foco en el rendimiento, las buenas prácticas y la mejora
         continua.
       </Paragraph>
-    </section>
-      <Heading1>Experiencia Profesional</Heading1>
-      <Experience title="Ingeniero de Software en Capitole">
-        <span slot="dates"
-          ><time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad</span
-        >
-        <div slot="description">
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. <Mark>Duis aute irure</Mark> dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-          </Paragraph>
-          <BreakLine />
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Paragraph>
-          <BreakLine />
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Paragraph>
-        </div>
-      </Experience>
-  </main>
+    </Section>
+    <Heading1>Experiencia Profesional</Heading1>
+    <Experience title="Ingeniero de Software en Capitole">
+      <span slot="dates"
+        ><time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad</span
+      >      
+        <Paragraph slot="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <Mark>Duis aute irure</Mark> dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </Paragraph>
+        <Paragraph slot="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+        <Paragraph  slot="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>     
+    </Experience>
+    <Experience title="Ingeniero de Software en Capitole">
+      <span slot="dates"
+        ><time datetime="2024-08-26 08:00">26 ago. 2024</time> - actualidad</span
+      >      
+        <Paragraph slot="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <Mark>Duis aute irure</Mark> dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </Paragraph>
+        <Paragraph slot="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+        <Paragraph  slot="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>     
+    </Experience>
+  </Page>
 </Layout>
 
 <style>

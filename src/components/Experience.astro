@@ -1,14 +1,16 @@
 ---
 import Heading2 from "@components/Heading2.astro";
 import ExperienceDates from "@components/ExperienceDates.astro";
+import BreakLine from "@components/BreakLine.astro";
 
 const { title } = Astro.props;
 ---
 
-<section class="mb-8">
+<section>
   <Heading2> {title} </Heading2>
   <ExperienceDates>
     <slot name="dates" />
   </ExperienceDates>
   <slot name="description" />
 </section>
+<BreakLine />
