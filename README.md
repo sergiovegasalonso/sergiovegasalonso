@@ -2,6 +2,7 @@
 
 ## pending tasks
 
+- index sin style
 - scroll mobile
 - components
 - cool marks
