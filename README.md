@@ -2,8 +2,9 @@
 
 ## pending tasks
 
-- index sin style
+
+- index sin style (todo componentes)
 - scroll mobile
-- components
 - cool marks
 - modify scrollbar
+- accesibilidad pro (testear)
