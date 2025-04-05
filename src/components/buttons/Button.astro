@@ -14,9 +14,15 @@ const { id } = Astro.props;
 
   downloadButton?.addEventListener("mousedown", () => onMouseDown());
 
+  downloadButton?.addEventListener("touchstart", () => onMouseDown());
+
   downloadButton?.addEventListener("mouseup", () => onMouseUpOrLeave());
 
+  downloadButton?.addEventListener("touchend", () => onMouseUpOrLeave());
+
   downloadButton?.addEventListener("mouseleave", () => onMouseUpOrLeave());
+
+  downloadButton?.addEventListener("touchcancel", () => onMouseUpOrLeave());
 
   function onMouseDown() {
     downloadButton?.classList.add(
@@ -32,3 +38,4 @@ const { id } = Astro.props;
     downloadButton?.classList.add("shadow-(--shadow-sm)");
   }
 </script>
+
