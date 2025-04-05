@@ -2,10 +2,19 @@
 import DownloadIcon from "@components/icons/DownloadIcon.astro";
 ---
 
-<button id="download-button"><DownloadIcon /></button>
+<button
+  id="download-button"
+  class="cursor-pointer border border-2 border-(--border-color) p-1 shadow-(--shadow-sm)"
+  ><DownloadIcon /></button
+>
 
 <script>
   const downloadButton = document.getElementById("download-button");
+
+  downloadButton?.addEventListener("mousedown", async () => {
+    downloadButton.classList.add("transform-(--button-translation-on-clicking)");
+    downloadButton.classList.remove("shadow-(--shadow-sm)");
+  });
 
   downloadButton?.addEventListener("click", async () => {
     const response: Response = await fetch("/api/download-cv");
@@ -16,5 +25,10 @@ import DownloadIcon from "@components/icons/DownloadIcon.astro";
     link.download = "products.pdf";
     link.click();
     URL.revokeObjectURL(objectUrl);
+  });
+
+  downloadButton?.addEventListener("mouseup", () => {
+    downloadButton.classList.remove("transform-(--button-translation-on-clicking)");
+    downloadButton.classList.add("shadow-(--shadow-sm)");
   });
 </script>
