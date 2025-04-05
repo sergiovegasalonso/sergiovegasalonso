@@ -1,0 +1,34 @@
+---
+const { id } = Astro.props;
+---
+
+<button
+  id={id}
+  class="cursor-pointer border border-2 border-(--border-color) p-1 shadow-(--shadow-sm)"
+>
+  <slot />
+</button>
+
+<script define:vars={{ id }}>
+  const downloadButton = document.getElementById(id);
+
+  downloadButton?.addEventListener("mousedown", () => onMouseDown());
+
+  downloadButton?.addEventListener("mouseup", () => onMouseUpOrLeave());
+
+  downloadButton?.addEventListener("mouseleave", () => onMouseUpOrLeave());
+
+  function onMouseDown() {
+    downloadButton?.classList.add(
+      "transform-(--button-translation-on-clicking)",
+    );
+    downloadButton?.classList.remove("shadow-(--shadow-sm)");
+  }
+
+  function onMouseUpOrLeave() {
+    downloadButton?.classList.remove(
+      "transform-(--button-translation-on-clicking)",
+    );
+    downloadButton?.classList.add("shadow-(--shadow-sm)");
+  }
+</script>

@@ -1,11 +1,17 @@
 ---
 import BreakLine from "@components/BreakLine.astro";
-import DownloadButton from "@components/DownloadButton.astro";
+import DownloadButton from "@components/buttons/DownloadButton.astro";
+import InfoButton from "@components/buttons/InfoButton.astro";
+import HorizontalSpace from "@components/HorizontalSpace.astro";
 ---
 
 <header class="flex items-center justify-between">
   <span class="text-xl font-semibold">Sergio Vegas Alonso</span>
-  <DownloadButton />
+  <ul>
+    <InfoButton />
+    <HorizontalSpace />
+    <DownloadButton />
+  </ul>
 </header>
 <BreakLine />
 <BreakLine />
