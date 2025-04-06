@@ -5,7 +5,7 @@ import Button from "@components/buttons/Button.astro";
 const buttonId = 'download-button"';
 ---
 
-<Button id={buttonId}><DownloadIcon /></Button>
+<Button id={buttonId} text="Descargar"><DownloadIcon /></Button>
 
 <script define:vars={{ buttonId }}>
   const downloadButton = document.getElementById(buttonId);

@@ -1,12 +1,13 @@
 ---
-const { id } = Astro.props;
+const { id, text } = Astro.props;
 ---
 
 <button
   id={id}
-  class="cursor-pointer border border-2 border-(--border-color) p-1 shadow-(--shadow-sm)"
+  class="flex cursor-pointer border border-2 border-(--border-color) p-1 shadow-(--shadow-sm)"
 >
   <slot />
+  <span class="hidden lg:inline lg:ml-2">{text}</span>
 </button>
 
 <script define:vars={{ id }}>
