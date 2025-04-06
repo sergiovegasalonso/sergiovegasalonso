@@ -4,10 +4,10 @@ const { id, text } = Astro.props;
 
 <button
   id={id}
-  class="flex cursor-pointer border border-2 border-(--border-color) p-1 shadow-(--shadow-sm)"
+  class="flex cursor-pointer border border-2 border-(--border-color) py-1 shadow-(--shadow-sm) px-2"
 >
   <slot />
-  <span class="hidden lg:ml-2 lg:inline">{text}</span>
+  <span class="hidden lg:ml-1 lg:inline">{text}</span>
 </button>
 
 <script define:vars={{ id }}>
