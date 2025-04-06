@@ -1,0 +1,18 @@
+---
+import CloseModalButton from "@components/buttons/CloseModalButton.astro";
+import Heading1 from "@components/headings/Heading1.astro";
+---
+
+<div class="backdrop fixed inset-0 z-[40] flex items-start justify-center">
+  <section
+    class="mt-50 h-[300px] w-full border border-2 border-(--border-color) bg-(--foreground-color) p-8 shadow-(--shadow) sm:w-xl"
+  >
+    <div class="flex justify-between"><Heading1>Información de Contacto</Heading1><CloseModalButton /></div>
+  </section>
+
+  <style>
+    .backdrop {
+      background-color: oklch(0 0 0 / 25%);
+    }
+  </style>
+</div>

@@ -2,6 +2,7 @@
 
 ## pending tasks
 
+- refactorizar modal
 - refactor download file
 - scroll mobile
 - cool marks
