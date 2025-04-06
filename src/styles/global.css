@@ -11,14 +11,15 @@
 
 :root {
   --background-size: 2rem 2rem;
-  --shadow-size-sm: 0.2rem;
-  --shadow-size: 0.4rem;
+  --small-shadow-size: 0.2rem;
+  --big-shadow-size: 0.4rem;
   --button-translation-on-clicking: translate(
-    var(--shadow-size-sm),
-    var(--shadow-size-sm)
+    var(--small-shadow-size),
+    var(--small-shadow-size)
   );
   --horizontal-space-size: 1rem;
   --break-line-size: 1rem;
+  --scrollbar-style: oklch(0.67 0.1734 271.48) transparent;
 }
 
 html.light {
@@ -27,8 +28,8 @@ html.light {
   --background-color-contrast: oklch(0.32 0 0);
   --foreground-color: oklch(0.97 0.0194 55.15);
   --border-color: oklch(0 0 0);
-  --shadow-sm: var(--shadow-size-sm) var(--shadow-size-sm) 0 0 oklch(0 0 0);
-  --shadow: var(--shadow-size) var(--shadow-size) 0 0 oklch(0 0 0);
+  --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0 oklch(0 0 0);
+  --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
   --mark-background-color: oklch(0.91 0.0472 18.06);
 }
 
@@ -38,8 +39,8 @@ html.dark {
   --background-color-contrast: oklch(0.32 0 0);
   --foreground-color: oklch(0.97 0.0194 55.15);
   --border-color: oklch(0 0 0);
-  --shadow-sm: var(--shadow-size-sm) var(--shadow-size) 0 0 oklch(0 0 0);
-  --shadow: var(--shadow-size) var(--shadow-size) 0 0 oklch(0 0 0);
+  --shadow-sm: var(--small-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
+  --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
   --mark-background-color: oklch(0.91 0.0472 18.06);
 }
 

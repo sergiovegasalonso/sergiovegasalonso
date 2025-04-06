@@ -1,12 +1,11 @@
 ---
 import DownloadIcon from "@components/icons/DownloadIcon.astro";
 import Button from "@components/buttons/Button.astro";
-import SpinIcon from "@components/icons/SpinIcon.astro";
 
 const buttonId = 'download-button"';
 ---
 
-<Button id={buttonId}><DownloadIcon /><SpinIcon /></Button>
+<Button id={buttonId}><DownloadIcon /></Button>
 
 <script define:vars={{ buttonId }}>
   const downloadButton = document.getElementById(buttonId);
