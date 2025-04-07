@@ -1,23 +1,6 @@
 ---
 import DownloadIcon from "@components/icons/DownloadIcon.astro";
 import Button from "@components/buttons/Button.astro";
-
-const buttonId = 'download-button"';
 ---
 
-<Button id={buttonId} text="Descargar"><DownloadIcon /></Button>
-
-<script define:vars={{ buttonId }}>
-  const downloadButton = document.getElementById(buttonId);
-
-  downloadButton?.addEventListener("click", async () => {
-    const response = await fetch("/api/download-cv");
-    const blob = await response.blob();
-    const objectUrl = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = objectUrl;
-    link.download = "SergioVegasAlonso-CV.pdf";
-    link.click();
-    URL.revokeObjectURL(objectUrl);
-  });
-</script>
+<Button id="download-button" text="Descargar"><DownloadIcon /></Button>

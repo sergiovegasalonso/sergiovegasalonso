@@ -24,6 +24,46 @@
   </body>
 </html>
 
+<script lang="js">
+  window.onload = function () {
+    // information
+    const infoButton = document.getElementById("info-button");
+    infoButton.addEventListener("click", () =>
+      modal.classList.remove("hidden"),
+    );
+
+    // close modal
+    const modal = document.getElementById("modal");
+    document.addEventListener("click", closeModalWhenClickInBackdropHandler);
+
+    function closeModalWhenClickInBackdropHandler(event) {
+      const element = event.target;
+      if (element.id === "modal") {
+        modal.classList.add("hidden");
+      }
+    }
+
+    const closeModalButton = document.getElementById("close-modal-button");
+    closeModalButton.addEventListener("click", () =>
+      modal.classList.add("hidden"),
+    );
+
+    // donwload button
+    const downloadButton = document.getElementById("download-button");
+
+    downloadButton?.addEventListener("click", async () => {
+      const response = await fetch("/api/download-cv");
+      const blob = await response.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = "SergioVegasAlonso-CV.pdf";
+      link.click();
+      URL.revokeObjectURL(objectUrl);
+    });
+  };
+</script>
+
 <style>
   html.light body {
     background-image: radial-gradient(

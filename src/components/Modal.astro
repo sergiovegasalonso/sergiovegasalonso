@@ -1,9 +1,14 @@
 ---
 import CloseModalButton from "@components/buttons/CloseModalButton.astro";
 import Heading1 from "@components/headings/Heading1.astro";
+
+const modalId = "modal";
 ---
 
-<div class="backdrop fixed inset-0 z-[40] flex items-start justify-center">
+<div
+  id={modalId}
+  class="backdrop fixed inset-0 z-[40] flex hidden items-start justify-center"
+>
   <section
     class="mt-50 h-[300px] w-9/10 border border-2 border-(--border-color) bg-(--foreground-color) p-8 shadow-(--shadow) sm:w-md sm:w-xl"
   >
@@ -11,10 +16,10 @@ import Heading1 from "@components/headings/Heading1.astro";
       <Heading1>Contacto</Heading1><CloseModalButton />
     </div>
   </section>
-
-  <style>
-    .backdrop {
-      background-color: oklch(0 0 0 / 25%);
-    }
-  </style>
 </div>
+
+<style>
+  .backdrop {
+    background-color: oklch(0 0 0 / 25%);
+  }
+</style>

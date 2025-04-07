@@ -2,6 +2,7 @@
 
 ## pending tasks
 
+- darle a los componentes las responsabilidades que deben tener
 - refactorizar modal
 - refactor download file
 - scroll mobile
