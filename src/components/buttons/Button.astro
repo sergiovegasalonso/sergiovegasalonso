@@ -11,31 +11,31 @@ const { id, text } = Astro.props;
 </button>
 
 <script define:vars={{ id }}>
-  const downloadButton = document.getElementById(id);
+  const button = document.getElementById(id);
 
-  downloadButton?.addEventListener("mousedown", () => onMouseDown());
+  button?.addEventListener("mousedown", () => onMouseDown());
 
-  downloadButton?.addEventListener("touchstart", () => onMouseDown());
+  button?.addEventListener("touchstart", () => onMouseDown());
 
-  downloadButton?.addEventListener("mouseup", () => onMouseUpOrLeave());
+  button?.addEventListener("mouseup", () => onMouseUpOrLeave());
 
-  downloadButton?.addEventListener("touchend", () => onMouseUpOrLeave());
+  button?.addEventListener("touchend", () => onMouseUpOrLeave());
 
-  downloadButton?.addEventListener("mouseleave", () => onMouseUpOrLeave());
+  button?.addEventListener("mouseleave", () => onMouseUpOrLeave());
 
-  downloadButton?.addEventListener("touchcancel", () => onMouseUpOrLeave());
+  button?.addEventListener("touchcancel", () => onMouseUpOrLeave());
 
   function onMouseDown() {
-    downloadButton?.classList.add(
+    button?.classList.add(
       "transform-(--button-translation-on-clicking)",
     );
-    downloadButton?.classList.remove("shadow-(--shadow-sm)");
+    button?.classList.remove("shadow-(--shadow-sm)");
   }
 
   function onMouseUpOrLeave() {
-    downloadButton?.classList.remove(
+    button?.classList.remove(
       "transform-(--button-translation-on-clicking)",
     );
-    downloadButton?.classList.add("shadow-(--shadow-sm)");
+    button?.classList.add("shadow-(--shadow-sm)");
   }
 </script>
