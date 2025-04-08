@@ -26,16 +26,12 @@ const { id, text } = Astro.props;
   button?.addEventListener("touchcancel", () => onMouseUpOrLeave());
 
   function onMouseDown() {
-    button?.classList.add(
-      "transform-(--button-translation-on-clicking)",
-    );
+    button?.classList.add("transform-(--button-translation-on-clicking)");
     button?.classList.remove("shadow-(--shadow-sm)");
   }
 
   function onMouseUpOrLeave() {
-    button?.classList.remove(
-      "transform-(--button-translation-on-clicking)",
-    );
+    button?.classList.remove("transform-(--button-translation-on-clicking)");
     button?.classList.add("shadow-(--shadow-sm)");
   }
 </script>
