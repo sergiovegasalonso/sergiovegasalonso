@@ -17,10 +17,10 @@ export default defineConfig({
   integrations: [
     sitemap(),
     playformCompress({
-      CSS: false,
+      CSS: true,
       HTML: true,
-      Image: false,
-      JavaScript: false,
+      Image: true,
+      JavaScript: true,
       SVG: true,
     }),
     compressor({
