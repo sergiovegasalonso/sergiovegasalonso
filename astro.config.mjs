@@ -24,7 +24,7 @@ export default defineConfig({
       SVG: true,
     }),
     compressor({
-      brotli: true,
+      brotli: false,
       gzip: true,
     }),
   ],
