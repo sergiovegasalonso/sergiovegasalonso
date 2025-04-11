@@ -26,6 +26,7 @@ export default defineConfig({
     compressor({
       brotli: false,
       gzip: true,
+      fileExtensions:[".png", ".html", ".css", ".ttf", ".xml", ".txt"]
     }),
   ],
 });
