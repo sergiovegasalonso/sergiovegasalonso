@@ -38,11 +38,11 @@ html.light {
 }
 
 html.dark {
-  --font-color: oklch(0.32 0 0);
-  --background-color: oklch(0.83 0.1708 80.48);
+  --font-color: floralwhite;
+  --background-color: oklch(0.39 0 0);
   --background-color-opacity-25: oklch(0 0 0 / 25%);
-  --background-color-contrast: oklch(0.32 0 0);
-  --foreground-color: oklch(0.97 0.0194 55.15);
+  --background-color-contrast: oklch(0.25 0 0);
+  --foreground-color: oklch(0.25 0 0);
   --border-color: oklch(0 0 0);
   --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0
     oklch(0 0 0);

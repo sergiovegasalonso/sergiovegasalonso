@@ -4,20 +4,24 @@ import SunIcon from "@components/icons/SunIcon.astro";
 import MoonIcon from "@components/icons/MoonIcon.astro";
 
 const id = "mode-button";
+const sunIconId = "sun-icon";
+const moonIconId = "moon-icon";
 ---
 
-<Button id={id} text="Mode">
-  <div id="sun-icon"><SunIcon /></div>
-  <div id="moon-icon"><MoonIcon /></div>
+<Button id={id} text="Modo">
+  <div id={sunIconId}><SunIcon /></div>
+  <div id={moonIconId}><MoonIcon /></div>
 </Button>
 
-<script define:vars={{ id }}>
+<script define:vars={{ id, sunIconId, moonIconId }}>
   const THEME = {
     LIGHT: "light",
     DARK: "dark",
   };
   const html = document.getElementById("root");
   const modeButton = document.getElementById(id);
+  const sunIcon = document.getElementById(sunIconId);
+  const moonIcon = document.getElementById(moonIconId);
 
   setThemeFromLocalStorageOrPrefersColorScheme();
   setEventListeners();
@@ -40,11 +44,15 @@ const id = "mode-button";
     html?.classList.remove(THEME.DARK);
     html?.classList.add(THEME.LIGHT);
     localStorage.setItem("mode", THEME.LIGHT);
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
   }
 
   function setDarkMode() {
     html?.classList.remove(THEME.LIGHT);
     html?.classList.add(THEME.DARK);
     localStorage.setItem("mode", THEME.DARK);
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
   }
 </script>
