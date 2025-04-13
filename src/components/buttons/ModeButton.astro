@@ -22,6 +22,7 @@ const moonIconId = "moon-icon";
   const modeButton = document.getElementById(id);
   const sunIcon = document.getElementById(sunIconId);
   const moonIcon = document.getElementById(moonIconId);
+  const metaThemeColor  = document.querySelector('meta[name="theme-color"]')
 
   setThemeFromLocalStorageOrPrefersColorScheme();
   setEventListeners();
@@ -46,6 +47,7 @@ const moonIconId = "moon-icon";
     localStorage.setItem("mode", THEME.LIGHT);
     sunIcon.classList.add("hidden");
     moonIcon.classList.remove("hidden");
+    metaThemeColor.setAttribute("content", "#fff");
   }
 
   function setDarkMode() {
@@ -54,5 +56,6 @@ const moonIconId = "moon-icon";
     localStorage.setItem("mode", THEME.DARK);
     sunIcon.classList.remove("hidden");
     moonIcon.classList.add("hidden");
+    metaThemeColor.setAttribute("content", "#fff");
   }
 </script>
