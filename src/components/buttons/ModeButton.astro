@@ -47,7 +47,7 @@ const moonIconId = "moon-icon";
     localStorage.setItem("mode", THEME.LIGHT);
     sunIcon.classList.add("hidden");
     moonIcon.classList.remove("hidden");
-    //metaThemeColor.setAttribute("content", "#fff");
+    metaThemeColor.setAttribute("content", "oklch(0.83 0.1708 80.48)");
   }
 
   function setDarkMode() {
@@ -56,6 +56,6 @@ const moonIconId = "moon-icon";
     localStorage.setItem("mode", THEME.DARK);
     sunIcon.classList.remove("hidden");
     moonIcon.classList.add("hidden");
-    //metaThemeColor.setAttribute("content", "#fff");
+    metaThemeColor.setAttribute("content", "oklch(0.39 0 0)");
   }
 </script>
