@@ -4,6 +4,10 @@ import Heading1 from "@components/headings/Heading1.astro";
 import LinkedInIcon from "@components/icons/LinkedInIcon.astro";
 import MailIcon from "@components/icons/MailIcon.astro";
 import PhoneIcon from "@components/icons/PhoneIcon.astro";
+import HorizontalSpace from "@components/HorizontalSpace.astro";
+import ExternalLink from "@components/icons/ExternalLink.astro";
+import SmallHorizontalSpace from "@components/SmallHorizontalSpace.astro";
+import BreakLine from "./BreakLine.astro";
 
 const modalId = "modal";
 ---
@@ -20,9 +24,25 @@ const modalId = "modal";
     </div>
     <div class="grow">
       <ul>
-        <li class="flex"><LinkedInIcon /> sdfdsfdfs</li>
-        <li class="flex"><MailIcon /> sdfdsfdfs</li>
-        <li class="flex"><PhoneIcon /> sdfdsfdfs</li>
+        <BreakLine />
+        <BreakLine />
+        <li class="flex items-center cursor-pointer">
+          <LinkedInIcon /><HorizontalSpace /> 
+          <a href="https://www.linkedin.com/in/%F0%9F%A4%96-sergio-vegas-alonso-a6728590/" target="_blank">LinkedIn</a>
+          <SmallHorizontalSpace /><ExternalLink />
+        </li>
+        <BreakLine />
+        <li class="flex items-center cursor-pointer">
+          <MailIcon /><HorizontalSpace />
+          <a href="mailto:sergio.vegas.alonso@gmail.com" target="_blank">Correo Electrónico</a>
+          <SmallHorizontalSpace /><ExternalLink />
+        </li>
+        <BreakLine />
+        <li class="flex items-center cursor-pointer">
+          <PhoneIcon /><HorizontalSpace /> 
+          <a href="tel:+34627007928" target="_blank">Teléfono</a>
+          <SmallHorizontalSpace /><ExternalLink />
+        </li>
       </ul>
     </div>
   </section>
