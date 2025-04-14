@@ -2,12 +2,13 @@
 import Heading2 from "@components/headings/Heading2.astro";
 import ExperienceDates from "@components/ExperienceDates.astro";
 import BreakLine from "@components/BreakLine.astro";
+import StarIcon from "@components/icons/StarIcon.astro";
 
 const { title } = Astro.props;
 ---
 
 <section>
-  <Heading2> {title} </Heading2>
+  <Heading2> {title}&nbsp;&nbsp;<StarIcon /> </Heading2>
   <ExperienceDates>
     <slot name="dates" />
   </ExperienceDates>

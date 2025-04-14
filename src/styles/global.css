@@ -25,7 +25,7 @@
 }
 
 html.light {
-  --font-color: oklch(0.32 0 0);
+  --font-color: oklch(0 0 0);
   --background-color: oklch(0.83 0.1708 80.48);
   --background-color-opacity-25: oklch(0 0 0 / 25%);
   --background-color-contrast: oklch(0.32 0 0);
@@ -34,20 +34,20 @@ html.light {
   --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0
     oklch(0 0 0);
   --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
-  --mark-background-color: oklch(0.91 0.0472 18.06);
+  --mark-background-color: oklch(0.85 0.0631 278.04);
 }
 
 html.dark {
-  --font-color: floralwhite;
+  --font-color: oklch(1 0 0);
   --background-color: oklch(0.39 0 0);
   --background-color-opacity-25: oklch(0 0 0 / 25%);
   --background-color-contrast: oklch(0.25 0 0);
-  --foreground-color: oklch(0.25 0 0);
+  --foreground-color: oklch(0.32 0 0);
   --border-color: oklch(0 0 0);
   --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0
     oklch(0 0 0);
   --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
-  --mark-background-color: oklch(0.91 0.0472 18.06);
+  --mark-background-color: oklch(0.62 0.1274 90.91);
 }
 
 * {
