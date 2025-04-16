@@ -48,20 +48,6 @@
     closeModalButton.addEventListener("click", () =>
       modal.classList.add("hidden"),
     );
-
-    // donwload button
-    const downloadButton = document.getElementById("download-button");
-
-    downloadButton?.addEventListener("click", async () => {
-      const response = await fetch("/api/download-cv");
-      const blob = await response.blob();
-      const objectUrl = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = objectUrl;
-      link.download = "SergioVegasAlonso-CV.pdf";
-      link.click();
-      URL.revokeObjectURL(objectUrl);
-    });
   };
 </script>
 

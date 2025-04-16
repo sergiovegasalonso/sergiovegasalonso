@@ -47,7 +47,7 @@ html.dark {
   --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0
     oklch(0 0 0);
   --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
-  --mark-background-color: oklch(0.62 0.1274 90.91);
+  --mark-background-color: transparent;
 }
 
 * {
