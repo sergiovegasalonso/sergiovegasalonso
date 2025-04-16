@@ -14,30 +14,30 @@ const loadingIconId = "loading-icon";
 </Button>
 
 <script define:vars={{ id, downloadIconId, loadingIconId }}>
-    const downloadButton = document.getElementById(id);
-    const downloadIcon = document.getElementById(downloadIconId);
-    const loadingIcon = document.getElementById(loadingIconId);
+  const downloadButton = document.getElementById(id);
+  const downloadIcon = document.getElementById(downloadIconId);
+  const loadingIcon = document.getElementById(loadingIconId);
 
-    downloadButton?.addEventListener("click", async () => {
-      loading();
-      const response = await fetch("/api/download-cv");
-      const blob = await response.blob();
-      loaded ();
-      const objectUrl = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = objectUrl;
-      link.download = "SergioVegasAlonso-CV.pdf";
-      link.click();
-      URL.revokeObjectURL(objectUrl);
-    });
+  downloadButton?.addEventListener("click", async () => {
+    loading();
+    const response = await fetch("/api/download-cv");
+    const blob = await response.blob();
+    loaded();
+    const objectUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = objectUrl;
+    link.download = "SergioVegasAlonso-CV.pdf";
+    link.click();
+    URL.revokeObjectURL(objectUrl);
+  });
 
-    function loading() {
-        downloadIcon.classList.add("hidden");
-        loadingIcon.classList.remove("hidden");
-    }
+  function loading() {
+    downloadIcon.classList.add("hidden");
+    loadingIcon.classList.remove("hidden");
+  }
 
-    function loaded() {
-        downloadIcon.classList.remove("hidden");
-        loadingIcon.classList.add("hidden");
-    }
+  function loaded() {
+    downloadIcon.classList.remove("hidden");
+    loadingIcon.classList.add("hidden");
+  }
 </script>
