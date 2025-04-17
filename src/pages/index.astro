@@ -53,7 +53,7 @@ import Modal from "@components/Modal.astro";
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados son:
-        <ul class="hidden lg:block mt-(--break-line-size) ">
+        <ul class="mt-(--break-line-size) hidden lg:block">
           <li class="list-inside list-disc">
             <Mark>.NET Multi-Platform App UI</Mark> para la apliación móvil
           </li>
@@ -89,7 +89,8 @@ import Modal from "@components/Modal.astro";
             <Mark>VueJS</Mark> para el <i>frontend</i>
           </li>
         </ul>
-        <ul class="flex flex-wrap justify-between gap-4 lg:hidden mt-(--break-line-size) ">
+        <ul
+          class="mt-(--break-line-size) flex flex-wrap justify-between gap-4 lg:hidden">
           <li><Mark>.NET Multi-Platform App UI</Mark></li>
           <li><Mark>ASP.NET Core</Mark></li>
           <li><Mark>Azure DevOps</Mark></li>
@@ -139,7 +140,7 @@ import Modal from "@components/Modal.astro";
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados en el <b>proyecto heredado</b> fueron:
-        <ul class="hidden lg:block mt-(--break-line-size) ">
+        <ul class="mt-(--break-line-size) hidden lg:block">
           <li class="list-inside list-disc">
             <Mark>Angular y Magnolia CMS</Mark> para el <i>frontend</i>
           </li>
@@ -150,7 +151,8 @@ import Modal from "@components/Modal.astro";
             <Mark>Dynamics CRM</Mark> para la gestión de bases de datos
           </li>
         </ul>
-        <ul class="flex flex-wrap justify-between gap-4 lg:hidden mt-(--break-line-size) ">
+        <ul
+          class="mt-(--break-line-size) flex flex-wrap justify-between gap-4 lg:hidden">
           <li><Mark>Angular</Mark></li>
           <li><Mark>ASP.NET Core</Mark></li>
           <li><Mark>Dynamics CRM</Mark></li>
@@ -160,7 +162,7 @@ import Modal from "@components/Modal.astro";
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados en el <b>nuevo proyecto</b> fueron:
-        <ul class="hidden lg:block mt-(--break-line-size) ">
+        <ul class="mt-(--break-line-size) hidden lg:block">
           <li class="list-inside list-disc">
             Arquitectura con diseño guiado por el dominio, principios <Mark
               >SOLID</Mark
@@ -197,7 +199,8 @@ import Modal from "@components/Modal.astro";
             >
           </li>
         </ul>
-        <ul class="flex flex-wrap justify-between gap-4 lg:hidden mt-(--break-line-size) ">
+        <ul
+          class="mt-(--break-line-size) flex flex-wrap justify-between gap-4 lg:hidden">
           <li><Mark>ASP.NET Core</Mark></li>
           <li><Mark>Azure DevOps</Mark></li>
           <li><Mark>DDD</Mark></li>
@@ -229,7 +232,7 @@ import Modal from "@components/Modal.astro";
         En esta experiencia trabajé con metodología <i>scrum</i>, dentro de la
         cual se me asignó el rol de <b>calidad</b>. Las funciones de este rol
         fueron:
-        <ul class="block mt-(--break-line-size) ">
+        <ul class="mt-(--break-line-size) block">
           <li class="list-inside list-disc">
             Decidir al principio de cada <i>sprint</i> cuáles iban a ser los <i
               >tests</i
@@ -266,7 +269,7 @@ import Modal from "@components/Modal.astro";
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados fueron:
-        <ul class="hidden mt-(--break-line-size) lg:block">
+        <ul class="mt-(--break-line-size) hidden lg:block">
           <li class="list-inside list-disc">
             <Mark>.NET</Mark> para el <i>backend</i>
           </li>
@@ -301,7 +304,8 @@ import Modal from "@components/Modal.astro";
             <Mark>NUnit y Specflow</Mark> para los <i>funcionales</i>
           </li>
         </ul>
-        <ul class="flex flex-wrap justify-between gap-4 lg:hidden mt-(--break-line-size) ">
+        <ul
+          class="mt-(--break-line-size) flex flex-wrap justify-between gap-4 lg:hidden">
           <li><Mark>.NET</Mark></li>
           <li><Mark>Angular</Mark></li>
           <li><Mark>Azure DevOps</Mark></li>
@@ -316,6 +320,56 @@ import Modal from "@components/Modal.astro";
           <li><Mark>TDD</Mark></li>
         </ul>
       </Paragraph>
+    </Experience>
+    <Experience title="Ingeniero de Software en Global Exchange">
+      <span slot="dates"
+        ><time datetime="2018-01-05 08:00">05 ene. 2018</time> - <time
+          datetime="2019-07-11 08:00">11 jul. 2019</time
+        >&nbsp;(1 año y 6 meses)</span
+      >
+    </Experience>
+    <Experience title="Profesor de clases particulares">
+      <span slot="dates"
+        ><time datetime="2016-11-11 08:00">11 nov. 2016</time> - <time
+          datetime="2018-11-11 08:00">11 nov. 2018</time
+        >&nbsp;(2 años)</span
+      >
+    </Experience>
+    <Experience title="Ingeniero de Software en Yowi TV">
+      <span slot="dates"
+        ><time datetime="2019-07-11 08:00">11 abr. 2017</time> - <time
+          datetime="2018-01-05 08:00">05 ene. 2018</time
+        >&nbsp;(9 meses)</span
+      >
+    </Experience>
+    <Experience title="Programador en Poniyoco">
+      <span slot="dates"
+        ><time datetime="2019-07-11 08:00">11 jul. 2019</time> - <time
+          datetime="2021-08-09 08:00">09 ago. 2021</time
+        >&nbsp;(2 años y 1 mes)</span
+      >
+    </Experience>
+    <Experience title="Programador en Glinda World Fashion">
+      <span slot="dates"
+        ><time datetime="2019-07-11 08:00">11 jul. 2019</time> - <time
+          datetime="2021-08-09 08:00">09 ago. 2021</time
+        >&nbsp;(2 años y 1 mes)</span
+      >
+    </Experience>
+    <Experience title="Programador en Mindshock">
+      <span slot="dates"
+        ><time datetime="2019-07-11 08:00">11 jul. 2019</time> - <time
+          datetime="2021-08-09 08:00">09 ago. 2021</time
+        >&nbsp;(2 años y 1 mes)</span
+      >
+    </Experience>
+    <Heading1>Experiencia Complementaria</Heading1>
+    <Experience title="Ingeniero de Software en Metropolis.coop">
+      <span slot="dates"
+        ><time datetime="2019-07-11 08:00">11 jul. 2019</time> - <time
+          datetime="2021-08-09 08:00">09 ago. 2021</time
+        >&nbsp;(2 años y 1 mes)</span
+      >
     </Experience>
   </Page>
   <Modal />
