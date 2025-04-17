@@ -5,8 +5,7 @@
       "files": "*.astro",
       "options": {
         "parser": "astro",
-        "bracketSameLine": true,
-        "htmlWhitespaceSensitivity": "strict"
+        "bracketSameLine": true
       }
     }
   ]

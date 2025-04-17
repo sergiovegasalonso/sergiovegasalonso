@@ -53,22 +53,26 @@ import Modal from "@components/Modal.astro";
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados son:
-        <ul>
+        <ul class="hidden lg:block">
           <li class="list-inside list-disc">
             <Mark>.NET Multi-Platform App UI</Mark> para la apliación móvil
           </li>
           <li class="list-inside list-disc">
-            Arquitectura limpia con <Mark>diseño guiado por el dominio</Mark>,
-            inyección de dependencias, patrón mediador, migraciones, etc
+            Arquitectura limpia con diseño guiado por el dominio, principios <Mark
+              >SOLID</Mark
+            >, inyección de dependencias, patrón mediador, migraciones, etc
           </li>
           <li class="list-inside list-disc">
             <Mark>ASP.NET Core</Mark> para los microservicios
           </li>
           <li class="list-inside list-disc">
+            <Mark>Azure DevOps</Mark>
+          </li>
+          <li class="list-inside list-disc">
             <Mark>MSTest</Mark> para los <i>tests</i> funcionales y unitarios
           </li>
           <li class="list-inside list-disc">
-            <Mark>Playwright</Mark> para los <li>tests e2e</li>
+            <Mark>Playwright</Mark> para los <i>tests e2e</i>
           </li>
           <li class="list-inside list-disc">
             <Mark>SQL Server y T-SQL</Mark> para la gestión de bases de datos
@@ -81,6 +85,19 @@ import Modal from "@components/Modal.astro";
           <li class="list-inside list-disc">
             <Mark>VueJS</Mark> para el <i>frontend</i>
           </li>
+        </ul>
+        <ul class="flex flex-wrap justify-between gap-4 lg:hidden">
+          <li><Mark>.NET Multi-Platform App UI</Mark></li>
+          <li><Mark>ASP.NET Core</Mark></li>
+          <li><Mark>Azure DevOps</Mark></li>
+          <li><Mark>DDD</Mark></li>
+          <li><Mark>MSTest</Mark></li>
+          <li><Mark>Playwright</Mark></li>
+          <li><Mark>SOLID</Mark></li>
+          <li><Mark>SQL Server</Mark></li>
+          <li><Mark>T-SQL</Mark></li>
+          <li><Mark>Vitest</Mark></li>
+          <li><Mark>VueJS</Mark></li>
         </ul>
       </Paragraph>
     </Experience>
@@ -118,7 +135,7 @@ import Modal from "@components/Modal.astro";
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados en el <b>proyecto heredado</b> fueron:
-        <ul>
+        <ul class="hidden lg:block">
           <li class="list-inside list-disc">
             <Mark>Angular y Magnolia CMS</Mark> para el <i>frontend</i>
           </li>
@@ -129,17 +146,31 @@ import Modal from "@components/Modal.astro";
             <Mark>Dynamics CRM</Mark> para la gestión de bases de datos
           </li>
         </ul>
+        <ul class="flex flex-wrap justify-between gap-4 lg:hidden">
+          <li><Mark>Angular</Mark></li>
+          <li><Mark>ASP.NET Core</Mark></li>
+          <li><Mark>Dynamics CRM</Mark></li>
+          <li><Mark>Magnolia CMS</Mark></li>
+        </ul>
       </Paragraph>
       <BreakLine slot="description" />
       <Paragraph slot="description">
         Las tecnologías y enfoques usados en el <b>nuevo proyecto</b> fueron:
-        <ul>
+        <ul class="hidden lg:block">
           <li class="list-inside list-disc">
-            Arquitectura limpia con <Mark>diseño guiado por el dominio</Mark>,
-            inyección de dependencias, patrón mediador, etc
+            Arquitectura limpia con diseño guiado por el dominio, principios <Mark
+              >SOLID</Mark
+            >, inyección de dependencias, patrón mediador, etc
           </li>
           <li class="list-inside list-disc">
             <Mark>ASP.NET Core</Mark> para los microservicios
+          </li>
+          <li class="list-inside list-disc">
+            <Mark>Azure DevOps</Mark>
+          </li>
+          <li class="list-inside list-disc">
+            <Mark>Docker y Kubernetes</Mark> para el despliegue y orquestación de
+            las aplicaciones
           </li>
           <li class="list-inside list-disc">
             <Mark>Dynamics CRM</Mark> para la gestión de bases de datos
@@ -151,13 +182,26 @@ import Modal from "@components/Modal.astro";
             <Mark>Nuxt</Mark> para el <i>frontend</i>
           </li>
           <li class="list-inside list-disc">
-            <Mark>Playwright</Mark> para los <li>tests e2e</li>
+            <Mark>Playwright</Mark> para los <i>tests e2e</i>
           </li>
           <li class="list-inside list-disc">
             <Mark>Vitest</Mark> para los <i>tests</i> unitarios del <i
               >frontend</i
             >
           </li>
+        </ul>
+        <ul class="flex flex-wrap justify-between gap-4 lg:hidden">
+          <li><Mark>ASP.NET Core</Mark></li>
+          <li><Mark>Azure DevOps</Mark></li>
+          <li><Mark>DDD</Mark></li>
+          <li><Mark>Docker</Mark></li>
+          <li><Mark>Dynamics CRM</Mark></li>
+          <li><Mark>Kubernetes</Mark></li>
+          <li><Mark>NUnit</Mark></li>
+          <li><Mark>Nuxt</Mark></li>
+          <li><Mark>SOLID</Mark></li>
+          <li><Mark>Playwright</Mark></li>
+          <li><Mark>Vitest</Mark></li>
         </ul>
       </Paragraph>
     </Experience>
