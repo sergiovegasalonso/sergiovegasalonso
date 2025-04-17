@@ -21,7 +21,6 @@
   --small-horizontal-space-size: 0.5rem;
   --horizontal-space-size: 1rem;
   --break-line-size: 1rem;
-  --scrollbar-style: oklch(0.68 0.2122 24) transparent;
   --scroll-top-button-right-position: calc(
     calc(100vw - var(--container-4xl)) / 2
   );
@@ -29,6 +28,7 @@
 
 html.light {
   --font-color: oklch(0 0 0);
+  --font-highlighted-color: oklch(0 0 0);
   --background-color: oklch(0.83 0.1708 80.48);
   --background-color-opacity-25: oklch(0 0 0 / 25%);
   --background-color-contrast: oklch(0.32 0 0);
@@ -37,11 +37,14 @@ html.light {
   --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0
     oklch(0 0 0);
   --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
+  --mark-font-color: oklch(0 0 0);
   --mark-background-color: oklch(0.85 0.0631 278.04);
+  --scrollbar-style: oklch(0.68 0.2122 24) transparent;
 }
 
 html.dark {
   --font-color: oklch(1 0 0);
+  --font-highlighted-color: oklch(0.85 0.0631 278.04);
   --background-color: oklch(0.39 0 0);
   --background-color-opacity-25: oklch(0 0 0 / 25%);
   --background-color-contrast: oklch(0.25 0 0);
@@ -50,7 +53,9 @@ html.dark {
   --shadow-sm: var(--small-shadow-size) var(--small-shadow-size) 0 0
     oklch(0 0 0);
   --shadow: var(--big-shadow-size) var(--big-shadow-size) 0 0 oklch(0 0 0);
+  --mark-font-color: oklch(0.89 0.1336 88.03);
   --mark-background-color: transparent;
+  --scrollbar-style: oklch(0.83 0.1708 80.48) transparent;
 }
 
 * {
