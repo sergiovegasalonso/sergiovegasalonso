@@ -5,8 +5,7 @@ const { id, text } = Astro.props;
 <button
   id={id}
   class="flex cursor-pointer border border-2 border-(--border-color) px-2 py-1 shadow-(--shadow-sm)"
-  aria-label={text}
->
+  aria-label={text}>
   <slot />
   <span class="hidden lg:ml-1 lg:inline">{text}</span>
 </button>
