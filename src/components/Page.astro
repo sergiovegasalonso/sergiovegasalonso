@@ -21,7 +21,6 @@ const scrollTopButtonId = "scroll-top-button";
   const scrollTopButton = document.getElementById(scrollTopButtonId);
 
   main.addEventListener("scroll", () => {
-    console.log(main.scrollTop);
     if (main.scrollTop < 20) {
       scrollTopButton.classList.add("hidden");
       scrollTopButton.classList.remove("block");
@@ -31,7 +30,11 @@ const scrollTopButtonId = "scroll-top-button";
     }
   });
 
-  console.log(main);
+  scrollTopButton.addEventListener('click', () => {
+    if (main.scrollTop >= 20) {
+      main.scrollTop = 0;
+    }
+  });
 </script>
 
 <style>
