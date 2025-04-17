@@ -1,15 +1,38 @@
 ---
 import ScrollTopButton from "@components/buttons/ScrollTopButton.astro";
+
+const id = "main";
+const scrollTopButtonId = "scroll-top-button";
 ---
 
 <main
-  class="relative h-full w-full overflow-x-hidden overflow-y-scroll border border-2 border-(--border-color) bg-(--foreground-color) pt-4 pr-4 pb-16 pl-4 shadow-(--shadow) lg:w-4xl lg:pt-8 lg:pr-8 lg:pl-8">
+  id={id}
+  class="relative h-full w-full overflow-x-hidden overflow-y-scroll scroll-smooth border border-2 border-(--border-color) bg-(--foreground-color) pt-4 pr-4 pb-16 pl-4 shadow-(--shadow) lg:w-4xl lg:pt-8 lg:pr-8 lg:pl-8">
   <slot />
   <div
-    class="fixed right-0 bottom-8 mr-4 lg:right-(--scroll-top-button-right-position) lg:bottom-16 lg:mr-8">
+    id={scrollTopButtonId}
+    class="fixed right-0 bottom-8 mr-4 hidden lg:right-(--scroll-top-button-right-position) lg:bottom-16 lg:mr-8">
     <ScrollTopButton />
   </div>
 </main>
+
+<script define:vars={{ id, scrollTopButtonId }}>
+  const main = document.getElementById(id);
+  const scrollTopButton = document.getElementById(scrollTopButtonId);
+
+  main.addEventListener("scroll", () => {
+    console.log(main.scrollTop);
+    if (main.scrollTop < 20) {
+      scrollTopButton.classList.add("hidden");
+      scrollTopButton.classList.remove("block");
+    } else {
+      scrollTopButton.classList.add("block");
+      scrollTopButton.classList.remove("hidden");
+    }
+  });
+
+  console.log(main);
+</script>
 
 <style>
   main {
