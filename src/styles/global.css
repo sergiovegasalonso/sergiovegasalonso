@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: "WinkySans";
-  src: url("/src/assets/fonts/WinkySans-Regular.ttf");
+  font-family: "OpenSans";
+  src: url("/src/assets/fonts/OpenSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -59,7 +59,7 @@ html.dark {
 }
 
 * {
-  font-family: "WinkySans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
   color: var(--font-color);
