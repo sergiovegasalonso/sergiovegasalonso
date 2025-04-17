@@ -1,6 +1,14 @@
+---
+import ScrollTopButton from "@components/buttons/ScrollTopButton.astro";
+---
+
 <main
-  class="h-full w-full overflow-x-hidden overflow-y-scroll border border-2 border-(--border-color) bg-(--foreground-color) p-4 shadow-(--shadow) lg:w-4xl lg:p-8">
+  class="relative h-full w-full overflow-x-hidden overflow-y-scroll border border-2 border-(--border-color) bg-(--foreground-color) pt-4 pr-4 pb-32 pl-4 shadow-(--shadow) lg:w-4xl lg:pt-8 lg:pr-8 lg:pl-8">
   <slot />
+  <div
+    class="fixed right-0 bottom-16 mr-4 lg:right-(--scroll-top-button-right-position) lg:mr-8">
+    <ScrollTopButton />
+  </div>
 </main>
 
 <style>
