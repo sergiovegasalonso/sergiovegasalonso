@@ -21,7 +21,7 @@
   --small-horizontal-space-size: 0.5rem;
   --horizontal-space-size: 1rem;
   --break-line-size: 1rem;
-  --scrollbar-style: oklch(0.67 0.1734 271.48) transparent;
+  --scrollbar-style: oklch(0.68 0.2122 24) transparent;
   --scroll-top-button-right-position: calc(
     calc(100vw - var(--container-4xl)) / 2
   );
