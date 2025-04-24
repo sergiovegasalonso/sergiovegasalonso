@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const filePath = path.resolve(
       "./src/pages/api",
-      "SergioVegasAlonso-CV.pdf",
+      "76022070D-SergioVegasAlonso-CV.pdf",
     );
     const fileBuffer = await fs.readFile(filePath);
 
@@ -13,7 +13,7 @@ export async function GET() {
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition":
-          'attachment; filename="SergioVegasAlonso-CV.pdf"',
+          'attachment; filename="76022070D-SergioVegasAlonso-CV.pdf"',
       },
     });
   } catch (error) {
