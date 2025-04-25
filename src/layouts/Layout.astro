@@ -34,7 +34,7 @@
 
     // close modal
     const modal = document.getElementById("modal");
-    document.addEventListener("click", closeModalWhenClickInBackdropHandler);
+    modal.addEventListener("click", closeModalWhenClickInBackdropHandler);
 
     function closeModalWhenClickInBackdropHandler(event) {
       const element = event.target;
