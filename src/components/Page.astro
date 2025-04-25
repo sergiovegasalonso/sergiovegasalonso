@@ -20,17 +20,21 @@ const scrollTopButtonId = "scroll-top-button";
   const main = document.getElementById(id);
   const scrollTopButton = document.getElementById(scrollTopButtonId);
 
-  main.addEventListener("scroll", () => {
-    if (main.scrollTop < 20) {
-      scrollTopButton.classList.add("hidden");
-      scrollTopButton.classList.remove("block");
-    } else {
-      scrollTopButton.classList.add("block");
-      scrollTopButton.classList.remove("hidden");
-    }
-  }, {
-    passive: true
-  });
+  main.addEventListener(
+    "scroll",
+    () => {
+      if (main.scrollTop < 20) {
+        scrollTopButton.classList.add("hidden");
+        scrollTopButton.classList.remove("block");
+      } else {
+        scrollTopButton.classList.add("block");
+        scrollTopButton.classList.remove("hidden");
+      }
+    },
+    {
+      passive: true,
+    },
+  );
 
   scrollTopButton.addEventListener("click", () => {
     if (main.scrollTop >= 20) {
