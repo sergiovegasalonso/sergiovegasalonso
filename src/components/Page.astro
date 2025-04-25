@@ -28,6 +28,8 @@ const scrollTopButtonId = "scroll-top-button";
       scrollTopButton.classList.add("block");
       scrollTopButton.classList.remove("hidden");
     }
+  }, {
+    passive: true
   });
 
   scrollTopButton.addEventListener("click", () => {
