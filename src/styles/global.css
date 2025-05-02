@@ -22,7 +22,7 @@
   --horizontal-space-size: 1rem;
   --break-line-size: 1rem;
   --scroll-top-button-right-position: calc(
-    calc(100vw - var(--container-4xl)) / 2
+    calc(100vw - var(--container-3xl)) / 2
   );
 }
 
