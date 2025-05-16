@@ -1,5 +1,5 @@
 # sergio vegas alonso cv resume
 
-## pending tasks
+## upgrade project
 
-- check screen reader
+`npx @astrojs/upgrade`
