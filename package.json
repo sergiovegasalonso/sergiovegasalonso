@@ -13,7 +13,7 @@
     "@astrojs/sitemap": "^3.4.1",
     "@playform/compress": "^0.1.9",
     "@tailwindcss/vite": "^4.1.1",
-    "astro": "^5.9.2",
+    "astro": "^5.9.3",
     "astro-compressor": "^1.0.0",
     "tailwindcss": "^4.1.1"
   },
